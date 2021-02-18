@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>GOAL</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,65 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>GOAL</h1>
+      <p id="message"></p>
+      <div class="topnav">
+
+  <form id="sign-up" class="unauthenticated">
+   <input type="text"  name="credentials[email]" placeholder="email">
+   <input type="password"  name="credentials[password]" placeholder="password">
+   <input type="password"  id="signup3" name="credentials[password_confirmation]" placeholder= "confrim_password">
+   <button type="submit">Sign up</button>
+  </form>
+
+  <form id="sign-in" class="unauthenticated">
+   <input type ="text" id="loginbox1" name="credentials[email]" placeholder= "Email">
+   <input type="password" id="loginbox2" name="credentials[password]" placeholder="Password">
+   <button type="submit" id="signinb" name="sign-in"> Sign In</button>
+  </form>
+
+  <form id="change-password" class= "authenticated">
+   <input type ="password" id="loginform3" name="passwords[old]" placeholder= "old-password"/>
+   <input type= "password" id="loginform4" name="passwords[new]" placeholder = "new-password"/>
+   <button type= "submit">Change Password</button>
+  </form>
+
+  <form id="sign-out" class ="authenticated">
+   <button type="submit" id="signoutb" name="sign-out">Sign Out</button>
+  </form>
+ </div>
+
+ <div id="on-auth">
+  <form id="create" class= "authenticated">
+    <input type="text" name="workout[name]" placeholder="name"/>
+    <input type="text" name="workout[date]" placeholder="date"/>
+    <input type="text" name="workout[category]" placeholder="category"/>
+    <button type="submit">Create</button>
+  </form>
+
+  <form id="update" class= "authenticated">
+   <input type="text" name="workout[_id]" placeholder="workout-id"/>
+   <input type="text" name="workout[name]"  placeholder="name"/>
+   <input type="text" name="workout[date]" placeholder="date"/>
+   <input type="text" name="workout[category]" placeholder="category"/>
+   <button type="submit">Update</button>
+  </form>
+
+ <form id="index" class= "authenticated">
+   <button type="submit">Index</button>
+   <p id="displayallworkout"></p>
+ </form>
+
+ <form id="show" class= "authenticated">
+   <button type="submit">Show</button>
+   <p id="displayworkout"></p>
+ </form>
+
+ <form id="destroy" class= "authenticated">
+   <input type="text" name="workout[_id]" placeholder="workout_id"/>
+   <button type="submit">Delete</button>
+  </form>
+</div>
+
     </body>
 </html>
