@@ -32,8 +32,9 @@ const onShowWorkout = function (event) {
 
 const onIndexWorkout = function (event) {
   event.preventDefault()
-
-  api.index()
+  const form = event.target
+  const userData = getFormFields(form)
+  api.index(userData)
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
 }

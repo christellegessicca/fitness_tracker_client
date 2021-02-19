@@ -8,8 +8,12 @@ const workoutEvents = require('./workouts/event')
 // require('./example')
 
 $(() => {
+  // ahref to the new html page
+  // $('.nav-link active').on('click',authEvents.)
   // user listeners
+  $('.unauthenticated').hide()
   $('.authenticated').hide()
+  $('.on_cover_page').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)

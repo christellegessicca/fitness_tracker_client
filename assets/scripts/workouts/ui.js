@@ -23,29 +23,30 @@ const onUpdateFailure = function (error) {
   $('form').trigger('reset')
 }
 
-const onShowSuccess = function (response) {
-  const workout = response.workouts
-  let workoutsHTML = ''
-  workout.forEach(workouts => {
-    const workoutHTML = (`
-    <h4>Workout Name: ${workouts.name}</h4>
-    <h4>Workout date: ${workouts.date._id}</h4>
-    <h4>Workout category: ${workouts.category._id}</h4>
-    <h4>Workout workout ID: ${workouts._id}</h4>
-    `)
-    workoutsHTML += workoutHTML
-  })
-
-  $('#message').text('Show was a success!')
-  $('#displayallworkout').html(workoutsHTML)
-}
-
-const onShowFailure = function (error) {
-  $('#message').text('Show was not a success!' + error.responseJSON.message)
-}
+// const onShowSuccess = function (response) {
+//   const workout = response.workouts._id
+//   let workoutsHTML = ''
+//   workout.forEach(workouts => {
+//     const workoutHTML = (`
+//     <h4>Workout Name: ${workouts.name}</h4>
+//     <h4>Workout date: ${workouts.date.</h4>
+//     <h4>Workout category: ${workouts.category.}</h4>
+//     <h4>Workout workout ID: ${workouts._id}</h4>
+//     `)
+//     workoutsHTML += workoutHTML
+//   })
+//
+//   $('#message').text('Show was a success!')
+//   $('#displayworkout').html(workoutsHTML)
+// }
+//
+// const onShowFailure = function (error) {
+//   $('#message').text('Show was not a success!' + error.responseJSON.message)
+// }
 
 const onIndexSuccess = function (response) {
   const workout = response.workouts
+  console.log(workout)
   let workoutsHTML = ''
   workout.forEach(workouts => {
     const workoutHTML = (`
@@ -58,7 +59,7 @@ const onIndexSuccess = function (response) {
   })
 
   $('#message').text('Index was a success!')
-  $('#displayallworkout').html(workoutsHTML)
+  $('#displayworkout').html(workoutsHTML)
 }
 
 const onIndexFailure = function (error) {
@@ -79,8 +80,8 @@ const onDestroyFailure = function (error) {
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
-  onShowFailure,
-  onShowSuccess,
+  // onShowFailure,
+  // onShowSuccess,
   onIndexFailure,
   onIndexSuccess,
   onUpdateFailure,

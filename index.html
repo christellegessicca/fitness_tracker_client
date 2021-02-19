@@ -12,34 +12,61 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>GOAL</h1>
       <p id="message"></p>
       <div class="topnav">
+        <link href="cover.css" rel="stylesheet">
+          </head>
 
-  <form id="sign-up" class="unauthenticated">
-   <input type="text"  name="credentials[email]" placeholder="email">
-   <input type="password"  name="credentials[password]" placeholder="password">
-   <input type="password"  id="signup3" name="credentials[password_confirmation]" placeholder= "confrim_password">
-   <button type="submit">Sign up</button>
-  </form>
+          <body class="text-center">
 
-  <form id="sign-in" class="unauthenticated">
-   <input type ="text" id="loginbox1" name="credentials[email]" placeholder= "Email">
-   <input type="password" id="loginbox2" name="credentials[password]" placeholder="Password">
-   <button type="submit" id="signinb" name="sign-in"> Sign In</button>
-  </form>
+            <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+              <header class="masthead mb-auto">
+                <div class="inner">
+                  <h1 class="masthead-brand">GOAL</h1>
+                  <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact</a>
+                  </nav>
+                </div>
+              </header>
 
-  <form id="change-password" class= "authenticated">
-   <input type ="password" id="loginform3" name="passwords[old]" placeholder= "old-password"/>
-   <input type= "password" id="loginform4" name="passwords[new]" placeholder = "new-password"/>
-   <button type= "submit">Change Password</button>
-  </form>
+              <main role="main" class="inner cover">
+                <h2 class="cover-heading">GO OUT AND LIVE</h2>
+                <p class="lead">Goal is an app that focuses on your overall well being. Get motivated mentality, physically and emotionally everyday. Together we can all reach our Goal.   </p>
+                <p class="lead">
+                  <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+                </p>
+              </main>
 
-  <form id="sign-out" class ="authenticated">
-   <button type="submit" id="signoutb" name="sign-out">Sign Out</button>
-  </form>
- </div>
+              <footer class="mastfoot mt-auto">
+                <div class="inner">
+                  <p>GOAL by Christelle Joseph</p>
+                </div>
+              </footer>
+            </div>
+            <form id="sign-up" class="unauthenticated" class="on_cover_page">
+             <input type="text"  name="credentials[email]" placeholder="email">
+             <input type="password"  name="credentials[password]" placeholder="password">
+             <input type="password"  id="signup3" name="credentials[password_confirmation]" placeholder= "confrim_password">
+             <button type="submit">Sign up</button>
+            </form>
 
+            <form id="sign-in" class="unauthenticated" class="on_cover_page">
+             <input type ="text" id="loginbox1" name="credentials[email]" placeholder= "Email">
+             <input type="password" id="loginbox2" name="credentials[password]" placeholder="Password">
+             <button type="submit" id="signinb" name="sign-in"> Sign In</button>
+            </form>
+
+            <form id="change-password" class= "authenticated" >
+             <input type ="password" id="loginform3" name="passwords[old]" placeholder= "old-password"/>
+             <input type= "password" id="loginform4" name="passwords[new]" placeholder = "new-password"/>
+             <button type= "submit">Change Password</button>
+            </form>
+
+            <form id="sign-out" class ="authenticated">
+             <button type="submit" id="signoutb" name="sign-out">Sign Out</button>
+            </form>
  <div id="on-auth">
   <form id="create" class= "authenticated">
     <input type="text" name="workout[name]" placeholder="name"/>
@@ -58,19 +85,21 @@
 
  <form id="index" class= "authenticated">
    <button type="submit">Index</button>
-   <p id="displayallworkout"></p>
- </form>
-
- <form id="show" class= "authenticated">
-   <button type="submit">Show</button>
    <p id="displayworkout"></p>
  </form>
+
 
  <form id="destroy" class= "authenticated">
    <input type="text" name="workout[_id]" placeholder="workout_id"/>
    <button type="submit">Delete</button>
   </form>
 </div>
-
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -27,8 +27,9 @@ const update = function (data) {
 }
 
 const index = function (data) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/workouts',
+    url: config.apiUrl + '/workouts/' + data.workout.id,
     method: 'GET',
     data: data,
     headers: {
@@ -37,17 +38,17 @@ const index = function (data) {
   })
 }
 
-const show = function (data) {
-  console.log(data)
-  return $.ajax({
-    url: config.apiUrl + '/workouts/' + data.workout._id,
-    method: 'GET',
-    data: data,
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
+// const show = function (data) {
+//   console.log(data)
+//   return $.ajax({
+//     url: config.apiUrl + '/workouts/',
+//     method: 'GET',
+//     data: data,
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
 
 const destroy = function (data) {
   return $.ajax({
@@ -63,7 +64,7 @@ const destroy = function (data) {
 module.exports = {
   create,
   index,
-  show,
+  // show,
   update,
   destroy
 }
