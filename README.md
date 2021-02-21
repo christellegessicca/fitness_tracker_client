@@ -38,9 +38,9 @@ The workout will have the following:categroy, date, position, owner: ref
 ## Images
 
 #### Wireframe:
-![wireframe](https://media.git.generalassemb.ly/user/32587/files/fcb96880-5005-11eb-8041-12917c6a1ca2)
+![wireframe]()
 
 ---
 
 #### ERD:
-![ERD](https://onedrive.live.com/view.aspx?resid=629F590EA69369A!3210&ithint=file%2cdocx&authkey=!AEAefU8_SxfYWmg)
+![ERD]()
