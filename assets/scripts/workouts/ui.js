@@ -45,17 +45,17 @@ const onUpdateFailure = function (error) {
 // }
 
 const onIndexSuccess = function (response) {
-  const workout = response.workouts
-  console.log(workout)
+  const result = response.workouts
+  console.log(result)
   let workoutsHTML = ''
-  workout.forEach(workouts => {
-    const workoutHTML = (`
+  result.forEach(workouts => {
+    const resultHTML = (`
     <h4>Workout Name: ${workouts.name}</h4>
     <h4>Workout date: ${workouts.date}</h4>
     <h4>Workout category: ${workouts.category}</h4>
     <h4>Workout workout ID: ${workouts._id}</h4>
     `)
-    workoutsHTML += workoutHTML
+    workoutsHTML += resultHTML
   })
 
   $('#message').text('Index was a success!')

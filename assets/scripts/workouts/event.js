@@ -21,23 +21,22 @@ const onUpdateWorkout = function (event) {
     .catch(ui.onUpdateFailure)
 }
 
-const onShowWorkout = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  api.show(data)
-    .then(ui.onShowSuccess)
-    .catch(ui.onShowFailure)
-}
+// const onShowWorkout = function (event) {
+//   event.preventDefault()
+//   const form = event.target
+//   const data = getFormFields(form)
+//   api.show(data)
+//     .then(ui.onShowSuccess)
+//     .catch(ui.onShowFailure)
+// }
 
 const onIndexWorkout = function (event) {
   event.preventDefault()
-  const form = event.target
-  const userData = getFormFields(form)
-  api.index(userData)
+  api.index()
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
 }
+
 const onDestroyWorkout = function (event) {
   event.preventDefault()
   const form = event.target
@@ -49,7 +48,6 @@ const onDestroyWorkout = function (event) {
 
 module.exports = {
   onCreateWorkout,
-  onShowWorkout,
   onIndexWorkout,
   onUpdateWorkout,
   onDestroyWorkout

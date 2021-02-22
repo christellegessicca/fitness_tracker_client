@@ -26,12 +26,10 @@ const update = function (data) {
   })
 }
 
-const index = function (data) {
-  console.log(data)
+const index = function () {
   return $.ajax({
-    url: config.apiUrl + '/workouts/' + data.workout.id,
+    url: config.apiUrl + '/workouts',
     method: 'GET',
-    data: data,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
