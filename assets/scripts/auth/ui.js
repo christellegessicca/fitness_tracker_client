@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   $('form').trigger('reset')
   $('.authenticated').show()
   $('.unauthenticated').hide()
+  $('.unauthenticated2').hide()
 }
 
 const onSignInFailure = function (error) {

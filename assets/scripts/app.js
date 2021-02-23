@@ -11,13 +11,14 @@ $(() => {
   // ahref to the new html page
 
   // user listeners
-  // $('.unauthenticated').hide()
+
   $('.authenticated').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
 
+  // $('.unauthenticated2').hide()
   $('#create').on('submit', workoutEvents.onCreateWorkout)
   $('#update').on('submit', workoutEvents.onUpdateWorkout)
   $('#index').on('submit', workoutEvents.onIndexWorkout)
